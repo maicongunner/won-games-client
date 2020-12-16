@@ -1,15 +1,15 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query';
+import media from 'styled-media-query'
 
-import { LogoProps } from '.';
+import { LogoProps } from '.'
 
 const wrapperModifiers = {
-  normal: () => css `
+  normal: () => css`
     width: 11rem;
     height: 3.3rem;
   `,
 
-  large: () => css `
+  large: () => css`
     width: 20rem;
     height: 5.9rem;
   `,
@@ -28,14 +28,13 @@ const wrapperModifiers = {
         display: none;
       }
     `}
-  `,
-
+  `
 }
 
 export const Wrapper = styled.div<LogoProps>`
-  ${({theme, color, size, hideOnMobile }) => css`
+  ${({ theme, color, size, hideOnMobile }) => css`
     color: ${theme.colors[color!]};
     ${!!size && wrapperModifiers[size]};
     ${!!hideOnMobile && wrapperModifiers.hideOnMobile};
   `}
-`;
+`

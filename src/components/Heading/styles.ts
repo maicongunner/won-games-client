@@ -1,6 +1,6 @@
 import styled, { css, DefaultTheme } from 'styled-components'
-import media from 'styled-media-query';
-import { HeadingProps } from '.';
+import media from 'styled-media-query'
+import { HeadingProps } from '.'
 
 const wrapperModifiers = {
   lineLeft: (theme: DefaultTheme) => css`
