@@ -32,7 +32,6 @@ export const MenuGroup = styled.div`
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
-
     > div {
       margin-left: ${theme.spacings.xsmall};
     }
@@ -48,7 +47,6 @@ export const MenuLink = styled.a`
     margin: 0.3rem ${theme.spacings.small} 0;
     text-decoration: none;
     text-align: center;
-
     &:hover {
       &::after {
         content: '';
@@ -58,7 +56,6 @@ export const MenuLink = styled.a`
         background-color: ${theme.colors.primary};
         animation: hoverAnimation 0.2s forwards;
       }
-
       @keyframes hoverAnimation {
         from {
           width: 0;
@@ -86,13 +83,13 @@ export const MenuFull = styled.nav<MenuFullProps>`
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 0;
     left: 0;
+    right: 0;
     height: 100vh;
-    overflow: hiddden;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out;
     opacity: ${isOpen ? 1 : 0};
     pointer-events: ${isOpen ? 'all' : 'none'};
-
     > svg {
       position: absolute;
       top: 0;
@@ -102,7 +99,6 @@ export const MenuFull = styled.nav<MenuFullProps>`
       width: 2.4rem;
       height: 2.4rem;
     }
-
     ${MenuNav} {
       display: flex;
       align-items: center;
@@ -110,12 +106,17 @@ export const MenuFull = styled.nav<MenuFullProps>`
       flex: 1;
       flex-direction: column;
     }
-
     ${MenuLink} {
       color: ${theme.colors.black};
       font-weight: ${theme.font.bold};
       font-size: ${theme.font.sizes.xlarge};
       margin-bottom: ${theme.spacings.small};
+      transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
+      transition: transform 0.3s ease-in-out;
+    }
+    ${RegisterBox} {
+      transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
+      transition: transform 0.3s ease-in-out;
     }
   `}
 `
@@ -126,7 +127,6 @@ export const RegisterBox = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 0 ${theme.spacings.xlarge} ${theme.spacings.xlarge};
-
     > span {
       display: block;
       margin: ${theme.spacings.xxsmall} 0;
