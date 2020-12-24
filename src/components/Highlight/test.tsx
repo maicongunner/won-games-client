@@ -33,4 +33,15 @@ describe('<Highlight />', () => {
       'background-image': `url(${props.backgroundImage})`
     })
   })
+
+  it('should render float image', () => {
+    renderWithTheme(
+      <Highlight {...props} floatImage="/img/red-dead-float.png" />
+    )
+
+    expect(screen.getByRole('img', { name: props.title })).toHaveAttribute(
+      'src',
+      '/img/red-dead-float.png'
+    )
+  })
 })
