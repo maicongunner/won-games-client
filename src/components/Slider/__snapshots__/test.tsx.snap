@@ -175,25 +175,6 @@ exports[`<Slider /> should render children a slider item 1`] = `
        
       Next
     </button>
-    <ul
-      class="slick-dots"
-      style="display: block;"
-    >
-      <li
-        class="slick-active"
-      >
-        <button>
-          1
-        </button>
-      </li>
-      <li
-        class=""
-      >
-        <button>
-          2
-        </button>
-      </li>
-    </ul>
   </div>
 </section>
 `

@@ -5,15 +5,8 @@ import Slider from '.'
 
 describe('<Slider />', () => {
   it('should render children a slider item', () => {
-    const settings = {
-      dots: true,
-      infinite: false,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    }
     const { container } = render(
-      <Slider settings={settings}>
+      <Slider settings={{ slidesToShow: 1, infinite: false }}>
         <div>Item 1</div>
         <div>Item 2</div>
       </Slider>
