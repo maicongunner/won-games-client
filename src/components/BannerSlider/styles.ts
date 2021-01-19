@@ -38,7 +38,7 @@ export const Wrapper = styled.section`
       }
       .slick-dots {
         position: absolute;
-        right: 0;
+        right: -${theme.spacings.medium};
         flex-direction: column;
         height: 100%;
         top: 0;
