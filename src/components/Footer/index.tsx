@@ -9,7 +9,7 @@ const Footer = () => (
     <S.Content>
       <S.Column>
         <Heading color="black" size="small" lineBottom lineColor="secondary">
-          Contact
+          Contact us
         </Heading>
         <a href="mailto:sac@wongames.com">sac@wongames.com</a>
         <a href="tel:5551347589951">(51) 34758-9951</a>
