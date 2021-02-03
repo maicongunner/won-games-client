@@ -23,6 +23,7 @@ export const Default: Story<RadioProps> = (args) => (
         label="primeiro"
         labelFor="primeiro"
         value="primeiro"
+        defaultChecked
         {...args}
       />
     </div>
