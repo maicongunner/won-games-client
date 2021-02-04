@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components'
 
+import { TextFieldProps } from '.'
+
+export type iconPositionProps = Pick<TextFieldProps, 'iconPosition'>
+
 export const InputWrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
@@ -15,7 +19,7 @@ export const InputWrapper = styled.div`
   `}
 `
 
-export const Input = styled.input`
+export const Input = styled.input<Pick<TextFieldProps, 'disable'>>`
   ${({ theme }) => css`
     color: ${theme.colors.black};
     font-family: ${theme.font.family};
@@ -36,4 +40,37 @@ export const Label = styled.label`
   `}
 `
 
-export const Wrapper = styled.div``
+export const Icon = styled.div<iconPositionProps>`
+  ${({ theme, iconPosition }) => css`
+    display: flex;
+    width: 2.2rem;
+    color: ${theme.colors.gray};
+    order: ${iconPosition === 'right' ? 1 : 0};
+
+    & > svg {
+      width: 100%;
+    }
+  `}
+`
+
+export const Wrapper = styled.div<Pick<TextFieldProps, 'disable'>>`
+  ${({ theme, disable }) => css`
+    ${disable === 'true' &&
+    css`
+      input {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      svg {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      label {
+        cursor: not-allowed;
+        color: ${theme.colors.lightGray};
+      }
+    `}
+  `}
+`
