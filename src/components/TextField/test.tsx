@@ -85,3 +85,70 @@ describe('<TextField />', () => {
     })
   })
 })
+
+it('Does not changes its value when disabled', async () => {
+  const onInput = jest.fn()
+  renderWithTheme(
+    <TextField
+      onInput={onInput}
+      label="TextField"
+      labelFor="TextField"
+      id="TextField"
+      disabled
+    />
+  )
+
+  const input = screen.getByRole('textbox')
+  expect(input).toBeDisabled()
+
+  const text = 'text'
+  userEvent.type(input, text)
+
+  await waitFor(() => {
+    expect(input).not.toHaveValue(text)
+  })
+  expect(onInput).not.toHaveBeenCalled()
+})
+
+it('Is accessible by tab', () => {
+  renderWithTheme(
+    <TextField label="TextField" labelFor="TextField" id="TextField" />
+  )
+
+  const input = screen.getByRole('textbox')
+  expect(document.body).toHaveFocus()
+
+  userEvent.tab()
+  expect(input).toHaveFocus()
+})
+
+it('Is not accessible by tab when disabled', () => {
+  renderWithTheme(
+    <TextField label="TextField" labelFor="TextField" id="TextField" disabled />
+  )
+
+  const input = screen.getByLabelText('TextField')
+  expect(document.body).toHaveFocus()
+
+  userEvent.tab()
+  expect(input).not.toHaveFocus()
+})
+
+it('Renders with error', () => {
+  const { container } = renderWithTheme(
+    <TextField
+      label="TextField"
+      labelFor="TextField"
+      id="TextField"
+      messageError="error message"
+    />
+  )
+
+  expect(screen.getByText('error message')).toBeInTheDocument()
+
+  const input = screen.getByRole('textbox')
+  expect(input.parentElement).toHaveStyle({
+    'border-color': '#FF6347'
+  })
+  expect(container.firstChild).toMatchSnapshot()
+})
