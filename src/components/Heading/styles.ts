@@ -9,13 +9,20 @@ const wrapperModifiers = {
       width: 3rem;
     }
   `,
+
   medium: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.xlarge};
   `,
+
+  huge: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.huge};
+  `,
+
   lineLeft: (theme: DefaultTheme, lineColor: LineColors) => css`
     padding-left: ${theme.spacings.xxsmall};
     border-left: 0.7rem solid ${theme.colors[lineColor]};
   `,
+
   lineBottom: (theme: DefaultTheme, lineColor: LineColors) => css`
     position: relative;
     margin-bottom: ${theme.spacings.medium};
