@@ -19,10 +19,10 @@ describe('<FormSignUp />', () => {
     expect(container.parentElement).toMatchSnapshot()
   })
 
-  it('should render the text and link to sign up', () => {
+  it('should render the text and link to sign in', () => {
     renderWithTheme(<FormSignUp />)
 
-    expect(screen.getByText(/Don’t have an account\?/i)).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /sign up/i })).toBeInTheDocument()
+    expect(screen.getByText(/Already have an account\?/i)).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /sign in/i })).toBeInTheDocument()
   })
 })
