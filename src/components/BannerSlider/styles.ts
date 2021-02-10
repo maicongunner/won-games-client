@@ -10,6 +10,7 @@ export const Wrapper = styled.section`
       align-items: center;
       justify-content: center;
       margin-top: ${theme.spacings.small};
+
       li {
         background: ${theme.colors.white};
         width: 1.2rem;
@@ -24,6 +25,7 @@ export const Wrapper = styled.section`
           background: ${theme.colors.primary};
         }
       }
+
       button {
         opacity: 0;
         width: 1.2rem;
@@ -36,9 +38,10 @@ export const Wrapper = styled.section`
         max-width: 104rem;
         margin: 0 auto;
       }
+
       .slick-dots {
         position: absolute;
-        right: -${theme.spacings.medium};
+        right: 0;
         flex-direction: column;
         height: 100%;
         top: 0;
