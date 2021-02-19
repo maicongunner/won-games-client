@@ -53,8 +53,8 @@ export async function getStaticProps() {
         rating: 'BR18',
         genres: ['Action', 'Role-playing']
       },
-      upcommingGames: gamesMock,
-      upcommingHighlight: hilightMock,
+      upcomingGames: gamesMock,
+      upcomingHighlight: hilightMock,
       recommendedGames: gamesMock
     }
   }
