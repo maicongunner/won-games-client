@@ -1,6 +1,6 @@
-import * as S from './styles'
 import Link from 'next/link'
 import Button from 'components/Button'
+import * as S from './styles'
 
 export type EmptyProps = {
   title: string
