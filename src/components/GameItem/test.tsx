@@ -1,4 +1,5 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { renderWithTheme } from 'utils/tests/helpers'
 
 import GameItem from '.'
 
@@ -10,7 +11,7 @@ const props = {
 
 describe('<GameItem />', () => {
   it('should render the item', () => {
-    render(<GameItem {...props} />)
+    renderWithTheme(<GameItem {...props} />)
 
     expect(
       screen.getByRole('heading', { name: props.title })
@@ -22,5 +23,15 @@ describe('<GameItem />', () => {
     )
 
     expect(screen.getByText(props.price)).toBeInTheDocument()
+  })
+
+  it('should render the item with download item', () => {
+    const downloadLink = 'http://link'
+
+    renderWithTheme(<GameItem {...props} downloadLink={downloadLink} />)
+
+    expect(
+      screen.getByRole('link', { name: `Get ${props.title} here` })
+    ).toHaveAttribute('href', downloadLink)
   })
 })
