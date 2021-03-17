@@ -22,7 +22,7 @@ const Button: React.ForwardRefRenderFunction<S.WrapperProps, ButtonProps> = (
     minimal = false,
     ...props
   },
-  ref: ButtonProps
+  ref
 ) => (
   <S.Wrapper
     size={size}
@@ -32,7 +32,7 @@ const Button: React.ForwardRefRenderFunction<S.WrapperProps, ButtonProps> = (
     ref={ref}
     {...props}
   >
-    {!!icon && icon}
+    {icon}
     {!!children && <span>{children}</span>}
   </S.Wrapper>
 )
