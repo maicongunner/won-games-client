@@ -13,7 +13,7 @@ describe('<TextField />', () => {
   })
 
   it('should render with label', () => {
-    renderWithTheme(<TextField label="text" />)
+    renderWithTheme(<TextField label="text" name="label" />)
 
     expect(screen.getByText(/text/i)).toBeInTheDocument()
   })
@@ -33,12 +33,7 @@ describe('<TextField />', () => {
   it('changes its value when typing', async () => {
     const onInput = jest.fn()
     renderWithTheme(
-      <TextField
-        label="textField"
-        labelFor="textField"
-        id="textField"
-        onInput={onInput}
-      />
+      <TextField label="textField" name="textField" onInput={onInput} />
     )
 
     const input = screen.getByRole('textbox')
@@ -89,13 +84,7 @@ describe('<TextField />', () => {
 it('Does not changes its value when disabled', async () => {
   const onInput = jest.fn()
   renderWithTheme(
-    <TextField
-      onInput={onInput}
-      label="TextField"
-      labelFor="TextField"
-      id="TextField"
-      disabled
-    />
+    <TextField onInput={onInput} label="TextField" name="TextField" disabled />
   )
 
   const input = screen.getByRole('textbox')
@@ -111,9 +100,7 @@ it('Does not changes its value when disabled', async () => {
 })
 
 it('Is accessible by tab', () => {
-  renderWithTheme(
-    <TextField label="TextField" labelFor="TextField" id="TextField" />
-  )
+  renderWithTheme(<TextField label="TextField" name="TextField" />)
 
   const input = screen.getByRole('textbox')
   expect(document.body).toHaveFocus()
@@ -123,9 +110,7 @@ it('Is accessible by tab', () => {
 })
 
 it('Is not accessible by tab when disabled', () => {
-  renderWithTheme(
-    <TextField label="TextField" labelFor="TextField" id="TextField" disabled />
-  )
+  renderWithTheme(<TextField label="TextField" name="TextField" disabled />)
 
   const input = screen.getByLabelText('TextField')
   expect(document.body).toHaveFocus()
@@ -138,8 +123,7 @@ it('Renders with error', () => {
   const { container } = renderWithTheme(
     <TextField
       label="TextField"
-      labelFor="TextField"
-      id="TextField"
+      name="TextField"
       messageError="error message"
     />
   )

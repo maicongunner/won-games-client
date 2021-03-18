@@ -40,7 +40,6 @@ exports[`<TextField /> should render correctly 1`] = `
   >
     <label
       class="c0"
-      for=""
     >
       text
     </label>
@@ -120,6 +119,7 @@ exports[`Renders with error 1`] = `
     <input
       class="c5"
       id="TextField"
+      name="TextField"
       type="text"
       value=""
     />
