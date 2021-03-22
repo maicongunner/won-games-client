@@ -1,58 +1,74 @@
+import { useState } from 'react'
+
 import Button from 'components/Button'
 import Checkbox from 'components/Checkbox'
 import Heading from 'components/Heading'
 import Radio from 'components/Radio'
+
 import * as S from './styles'
 
-const ExploreSidebar = () => (
-  <S.Wrapper>
-    <Heading lineBottom lineColor="secondary" size="small">
-      Price
-    </Heading>
-    <Checkbox name="discounted" label="under $50" labelFor="under-50" />
-    <Checkbox name="under-100" label="under $100" labelFor="under-100" />
-    <Checkbox name="under-150" label="under $150" labelFor="under-150" />
-    <Checkbox name="under-200" label="under $200" labelFor="under-200" />
-    <Checkbox name="free" label="free" labelFor="free" />
-    <Checkbox name="discounted" label="discounted" labelFor="discounted" />
+export type ItemProps = {
+  title: string
+  name: string
+  type: string
+  fields: Field[]
+}
 
-    <Heading lineBottom lineColor="secondary" size="small">
-      Sort by
-    </Heading>
-    <Radio
-      id="high-to-low"
-      name="sort-by"
-      label="High to low"
-      labelFor="high-to-low"
-      value="high-to-low"
-    />
-    <Radio
-      id="low-to-high"
-      name="sort-by"
-      label="Low to high"
-      labelFor="low-to-high"
-      value="low-to-high"
-    />
+type Field = {
+  label: string
+  name: string
+}
 
-    <Heading lineBottom lineColor="secondary" size="small">
-      System
-    </Heading>
-    <Checkbox name="windows" label="Windows" labelFor="windows" />
-    <Checkbox name="mac" label="Mac" labelFor="mac" />
-    <Checkbox name="linux" label="Linux" labelFor="linux" />
+type Values = {
+  [field: string]: boolean | string
+}
 
-    <Heading lineBottom lineColor="secondary" size="small">
-      Genre
-    </Heading>
-    <Checkbox name="action" label="Action" labelFor="action" />
-    <Checkbox name="adventure" label="Adventure" labelFor="adventure" />
-    <Checkbox name="fps" label="FPS" labelFor="fps" />
-    <Checkbox name="mmorpg" label="MMORPG" labelFor="mmorpg" />
+export type ExploreSidebarProps = {
+  items: ItemProps[]
+  initialValues?: Values
+}
 
-    <Button fullWidth size="medium">
-      Filter
-    </Button>
-  </S.Wrapper>
-)
+const ExploreSidebar = ({ items, initialValues = {} }: ExploreSidebarProps) => {
+  const [values, setValues] = useState(initialValues)
+
+  return (
+    <S.Wrapper>
+      {items.map((item) => (
+        <div key={item.title}>
+          <Heading lineBottom lineColor="secondary" size="small">
+            {item.title}
+          </Heading>
+
+          {item.type === 'checkbox' &&
+            item.fields.map((field) => (
+              <Checkbox
+                key={field.name}
+                name={field.name}
+                label={field.label}
+                labelFor={field.name}
+                isChecked={!!values[field.name]}
+              />
+            ))}
+
+          {item.type === 'radio' &&
+            item.fields.map((field) => (
+              <Radio
+                key={field.name}
+                id={field.name}
+                name={item.name}
+                label={field.label}
+                labelFor={field.name}
+                value={field.name}
+                defaultChecked={field.name === values[item.name]}
+              />
+            ))}
+        </div>
+      ))}
+      <Button fullWidth size="medium">
+        Filter
+      </Button>
+    </S.Wrapper>
+  )
+}
 
 export default ExploreSidebar

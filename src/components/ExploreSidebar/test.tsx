@@ -2,10 +2,11 @@ import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
 import ExploreSidebar from '.'
+import mock from './mock'
 
 describe('<ExploreSidebar />', () => {
   it('should render headings', () => {
-    renderWithTheme(<ExploreSidebar />)
+    renderWithTheme(<ExploreSidebar items={mock} />)
 
     expect(screen.getByRole('heading', { name: /price/i })).toBeInTheDocument()
     expect(
@@ -16,7 +17,7 @@ describe('<ExploreSidebar />', () => {
   })
 
   it('should render inputs', () => {
-    renderWithTheme(<ExploreSidebar />)
+    renderWithTheme(<ExploreSidebar items={mock} />)
 
     expect(
       screen.getByRole('checkbox', { name: /under \$50/i })
@@ -27,8 +28,20 @@ describe('<ExploreSidebar />', () => {
   })
 
   it('shoud render filter button', () => {
-    renderWithTheme(<ExploreSidebar />)
+    renderWithTheme(<ExploreSidebar items={mock} />)
 
     expect(screen.getByRole('button', { name: /filter/i })).toBeInTheDocument()
+  })
+
+  it('should check initial values that are passed', () => {
+    renderWithTheme(
+      <ExploreSidebar
+        items={mock}
+        initialValues={{ windows: true, sort_by: 'low-to-high' }}
+      />
+    )
+
+    expect(screen.getByRole('checkbox', { name: /windows/i })).toBeChecked()
+    expect(screen.getByRole('radio', { name: /low to high/i })).toBeChecked()
   })
 })
