@@ -574,7 +574,7 @@ exports[`<Showcase /> should render full component 1`] = `
                     >
                       <a
                         class="c16"
-                        href="/game"
+                        href="/game/population-zero"
                       >
                         <img
                           alt="Population Zero"
@@ -586,7 +586,7 @@ exports[`<Showcase /> should render full component 1`] = `
                       >
                         <a
                           class="c18"
-                          href="/game"
+                          href="/game/population-zero"
                         >
                           <h3
                             class="c19"
@@ -627,12 +627,12 @@ exports[`<Showcase /> should render full component 1`] = `
                           <div
                             class="c23"
                           >
-                            R$ 235,00
+                            $235.00
                           </div>
                           <div
                             class="c24"
                           >
-                            R$ 215,00
+                            $215.00
                           </div>
                           <button
                             class="c25"
@@ -672,7 +672,7 @@ exports[`<Showcase /> should render full component 1`] = `
                     >
                       <a
                         class="c16"
-                        href="/game"
+                        href="/game/population-zero"
                       >
                         <img
                           alt="Population Zero"
@@ -684,7 +684,7 @@ exports[`<Showcase /> should render full component 1`] = `
                       >
                         <a
                           class="c18"
-                          href="/game"
+                          href="/game/population-zero"
                         >
                           <h3
                             class="c19"
@@ -725,12 +725,12 @@ exports[`<Showcase /> should render full component 1`] = `
                           <div
                             class="c23"
                           >
-                            R$ 235,00
+                            $235.00
                           </div>
                           <div
                             class="c24"
                           >
-                            R$ 215,00
+                            $215.00
                           </div>
                           <button
                             class="c25"
@@ -770,7 +770,7 @@ exports[`<Showcase /> should render full component 1`] = `
                     >
                       <a
                         class="c16"
-                        href="/game"
+                        href="/game/population-zero"
                       >
                         <img
                           alt="Population Zero"
@@ -782,7 +782,7 @@ exports[`<Showcase /> should render full component 1`] = `
                       >
                         <a
                           class="c18"
-                          href="/game"
+                          href="/game/population-zero"
                         >
                           <h3
                             class="c19"
@@ -823,12 +823,12 @@ exports[`<Showcase /> should render full component 1`] = `
                           <div
                             class="c23"
                           >
-                            R$ 235,00
+                            $235.00
                           </div>
                           <div
                             class="c24"
                           >
-                            R$ 215,00
+                            $215.00
                           </div>
                           <button
                             class="c25"
@@ -868,7 +868,7 @@ exports[`<Showcase /> should render full component 1`] = `
                     >
                       <a
                         class="c16"
-                        href="/game"
+                        href="/game/population-zero"
                       >
                         <img
                           alt="Population Zero"
@@ -880,7 +880,7 @@ exports[`<Showcase /> should render full component 1`] = `
                       >
                         <a
                           class="c18"
-                          href="/game"
+                          href="/game/population-zero"
                         >
                           <h3
                             class="c19"
@@ -921,12 +921,12 @@ exports[`<Showcase /> should render full component 1`] = `
                           <div
                             class="c23"
                           >
-                            R$ 235,00
+                            $235.00
                           </div>
                           <div
                             class="c24"
                           >
-                            R$ 215,00
+                            $215.00
                           </div>
                           <button
                             class="c25"
@@ -995,4 +995,4 @@ exports[`<Showcase /> should render full component 1`] = `
     </section>
   </div>
 </body>
-`;
+`
