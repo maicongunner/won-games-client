@@ -233,6 +233,8 @@ exports[`<Showcase /> should render full component 1`] = `
 
 .c18 {
   max-width: calc(100% - 2.5rem);
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c19 {
@@ -570,19 +572,21 @@ exports[`<Showcase /> should render full component 1`] = `
                     <article
                       class="c15"
                     >
-                      <div
+                      <a
                         class="c16"
+                        href="/game"
                       >
                         <img
                           alt="Population Zero"
                           src="https://source.unsplash.com/user/willianjusten/300x140"
                         />
-                      </div>
+                      </a>
                       <div
                         class="c17"
                       >
-                        <div
+                        <a
                           class="c18"
+                          href="/game"
                         >
                           <h3
                             class="c19"
@@ -594,7 +598,7 @@ exports[`<Showcase /> should render full component 1`] = `
                           >
                             Rockstar Games
                           </h4>
-                        </div>
+                        </a>
                         <div
                           class="c21"
                           role="button"
@@ -666,19 +670,21 @@ exports[`<Showcase /> should render full component 1`] = `
                     <article
                       class="c15"
                     >
-                      <div
+                      <a
                         class="c16"
+                        href="/game"
                       >
                         <img
                           alt="Population Zero"
                           src="https://source.unsplash.com/user/willianjusten/300x141"
                         />
-                      </div>
+                      </a>
                       <div
                         class="c17"
                       >
-                        <div
+                        <a
                           class="c18"
+                          href="/game"
                         >
                           <h3
                             class="c19"
@@ -690,7 +696,7 @@ exports[`<Showcase /> should render full component 1`] = `
                           >
                             Rockstar Games
                           </h4>
-                        </div>
+                        </a>
                         <div
                           class="c21"
                           role="button"
@@ -762,19 +768,21 @@ exports[`<Showcase /> should render full component 1`] = `
                     <article
                       class="c15"
                     >
-                      <div
+                      <a
                         class="c16"
+                        href="/game"
                       >
                         <img
                           alt="Population Zero"
                           src="https://source.unsplash.com/user/willianjusten/300x142"
                         />
-                      </div>
+                      </a>
                       <div
                         class="c17"
                       >
-                        <div
+                        <a
                           class="c18"
+                          href="/game"
                         >
                           <h3
                             class="c19"
@@ -786,7 +794,7 @@ exports[`<Showcase /> should render full component 1`] = `
                           >
                             Rockstar Games
                           </h4>
-                        </div>
+                        </a>
                         <div
                           class="c21"
                           role="button"
@@ -858,19 +866,21 @@ exports[`<Showcase /> should render full component 1`] = `
                     <article
                       class="c15"
                     >
-                      <div
+                      <a
                         class="c16"
+                        href="/game"
                       >
                         <img
                           alt="Population Zero"
                           src="https://source.unsplash.com/user/willianjusten/300x143"
                         />
-                      </div>
+                      </a>
                       <div
                         class="c17"
                       >
-                        <div
+                        <a
                           class="c18"
+                          href="/game"
                         >
                           <h3
                             class="c19"
@@ -882,7 +892,7 @@ exports[`<Showcase /> should render full component 1`] = `
                           >
                             Rockstar Games
                           </h4>
-                        </div>
+                        </a>
                         <div
                           class="c21"
                           role="button"
@@ -985,4 +995,4 @@ exports[`<Showcase /> should render full component 1`] = `
     </section>
   </div>
 </body>
-`
+`;

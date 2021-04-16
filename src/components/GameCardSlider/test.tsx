@@ -7,6 +7,7 @@ import GameCardSlider from '.'
 describe('<GameCardSlider />', () => {
   const items = [
     {
+      slug: 'population-zero',
       title: 'Population Zero',
       developer: 'Rockstar Games',
       img: 'https://source.unsplash.com/user/willianjusten/300x140',
@@ -14,6 +15,7 @@ describe('<GameCardSlider />', () => {
       promotionalPrice: 'R$ 215,00'
     },
     {
+      slug: 'population-zero',
       title: 'Population Zero',
       developer: 'Rockstar Games',
       img: 'https://source.unsplash.com/user/willianjusten/300x141',
@@ -21,6 +23,7 @@ describe('<GameCardSlider />', () => {
       promotionalPrice: 'R$ 215,00'
     },
     {
+      slug: 'population-zero',
       title: 'Population Zero',
       developer: 'Rockstar Games',
       img: 'https://source.unsplash.com/user/willianjusten/300x142',
@@ -28,6 +31,7 @@ describe('<GameCardSlider />', () => {
       promotionalPrice: 'R$ 215,00'
     },
     {
+      slug: 'population-zero',
       title: 'Population Zero',
       developer: 'Rockstar Games',
       img: 'https://source.unsplash.com/user/willianjusten/300x143',
@@ -35,6 +39,7 @@ describe('<GameCardSlider />', () => {
       promotionalPrice: 'R$ 215,00'
     },
     {
+      slug: 'population-zero',
       title: 'Population Zero',
       developer: 'Rockstar Games',
       img: 'https://source.unsplash.com/user/willianjusten/300x144',
@@ -42,6 +47,7 @@ describe('<GameCardSlider />', () => {
       promotionalPrice: 'R$ 215,00'
     },
     {
+      slug: 'population-zero',
       title: 'Population Zero',
       developer: 'Rockstar Games',
       img: 'https://source.unsplash.com/user/willianjusten/300x145',
