@@ -23,6 +23,8 @@ export const Wrapper = styled.section<WrapperProps>`
       margin: 0 -${theme.spacings.xxsmall};
     }
     ${media.greaterThan('large')`
+      padding: 0 ${theme.spacings.xlarge};
+
       .slick-slide > div {
         margin: 0 ${theme.spacings.xsmall};
       }
@@ -43,10 +45,10 @@ export const Wrapper = styled.section<WrapperProps>`
       transform: translate(0, -50%);
     }
     .slick-prev {
-      left: -${theme.spacings.xxlarge};
+      left: -${theme.spacings.xlarge};
     }
     .slick-next {
-      right: -${theme.spacings.xxlarge};
+      right: -${theme.spacings.xlarge};
     }
     .slick-prev.slick-disabled,
     .slick-next.slick-disabled {
