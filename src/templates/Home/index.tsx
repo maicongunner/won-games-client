@@ -11,30 +11,30 @@ import Base from 'templates/Base'
 
 export type HomeTemplateProps = {
   banners: BannerProps[]
-  newGamesTitle: string
+  newGamesTitle?: string
   newGames: GameCardProps[]
-  mostPopularGamesTitle: string
+  mostPopularGamesTitle?: string
   mostPopularHighlight: HighlightProps
   mostPopularGames: GameCardProps[]
-  upcommingGamesTitle: string
+  upcommingGamesTitle?: string
   upcommingGames: GameCardProps[]
   upcommingHighligth: HighlightProps
-  freeGamesTitle: string
+  freeGamesTitle?: string
   freeGames: GameCardProps[]
   freeHighligth: HighlightProps
 }
 
 const Home = ({
   banners,
-  newGamesTitle,
+  newGamesTitle = 'New Games',
   newGames,
-  mostPopularGamesTitle,
+  mostPopularGamesTitle = 'Most Popular',
   mostPopularHighlight,
   mostPopularGames,
-  upcommingGamesTitle,
+  upcommingGamesTitle = 'Upcoming',
   upcommingGames,
   upcommingHighligth,
-  freeGamesTitle,
+  freeGamesTitle = 'Free Games',
   freeGames,
   freeHighligth
 }: HomeTemplateProps) => (
