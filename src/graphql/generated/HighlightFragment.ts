@@ -6,25 +6,25 @@
 import { ENUM_COMPONENTPAGEHIGHLIGHT_ALIGNMENT } from "./globalTypes";
 
 // ====================================================
-// GraphQL fragment: HightlightFragment
+// GraphQL fragment: HighlightFragment
 // ====================================================
 
-export interface HightlightFragment_background {
+export interface HighlightFragment_background {
   __typename: "UploadFile";
   url: string;
 }
 
-export interface HightlightFragment_floatImage {
+export interface HighlightFragment_floatImage {
   __typename: "UploadFile";
   url: string;
 }
 
-export interface HightlightFragment {
+export interface HighlightFragment {
   __typename: "ComponentPageHighlight";
   title: string;
   subtitle: string;
-  background: HightlightFragment_background | null;
-  floatImage: HightlightFragment_floatImage | null;
+  background: HighlightFragment_background | null;
+  floatImage: HighlightFragment_floatImage | null;
   buttonLabel: string;
   buttonLink: string;
   alignment: ENUM_COMPONENTPAGEHIGHLIGHT_ALIGNMENT | null;
