@@ -1397,7 +1397,7 @@ type ComponentPagePopularGames {
 }
 
 input ComponentPagePopularGameInput {
-  title: String!
+  title: String
   highlight: ComponentPageHighlightInput
   games: [ID]
 }
